@@ -13,7 +13,7 @@ Implementation Details
   test to run as a simple integer.
 
 - `main.js` imports `tests.js` and creates a representation within `index.html`
-  for each test with function `create`.
+  for each test.
 
   It then starts a runner by creating a [WebWorker][WW] that executes
   `runner.js` for each test.
@@ -37,7 +37,7 @@ Build and Run
 1. Clone the Git Repository
 
    ```bash
-   git clone https://github.com:MaximWandrowski/testrunner.git
+   git clone https://github.com/MaximWandrowski/testrunner.git
    ```
 
 2. Build the Project
