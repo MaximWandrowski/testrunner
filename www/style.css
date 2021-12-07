@@ -1,0 +1,133 @@
+@charset 'utf-8';
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+
+}
+
+html {
+  background-color: #222;
+}
+
+#container {
+  position: relative;
+  width: 75vw;
+  min-height: 25vw;
+  margin: 12.5vw auto auto auto;
+  padding: 1vh;
+  border-radius: 1em;
+  background-color: #444;
+  border: .1vw solid #aaa;
+}
+
+#status {
+  top: 0;
+  width: 100%;
+  transition: 0.25s;
+  text-overflow: ellipsis;
+}
+
+#interact {
+  display: inline-block;
+  width: 4em;
+  border: .1vw solid #aaa;
+  border-radius: 1em;
+  color: #aaa;
+  text-align: center;
+}
+
+#interact .running {
+  
+}
+
+#status > span {
+  margin-right: 1vw;
+}
+
+#running {
+  color: #ff0;
+}
+#running::before {
+  color: #ff0;
+  content: '⟳';
+}
+
+#passed {
+  color: #0f0;
+}
+
+#passed::before {
+  content: '✓';
+}
+
+#failed {
+  color: #f00;
+}
+
+#failed::before {
+  content: '✗';
+}
+
+.testcase {
+  top: 0;
+  transition: 0.25s;
+  margin-top: 1vh;
+  text-overflow: ellipsis;
+  border-radius: 1em;
+  padding: 1vw;
+}
+
+.testcase::before {
+  display: inline-block;
+  width: 2em;
+  text-align: center;
+}
+
+.testcase.scheduled {
+  color: #aaa;
+  background-color: #aaa4;
+  border: .1vw solid #aaa;
+}
+
+.testcase.scheduled::before {
+  margin-left: -1vw;
+  content: '◯';
+}
+
+.testcase.running {
+  background-color: #ff04;
+  border: .1vw solid #ff0;
+  color: #ff0;
+}
+
+.testcase.running::before {
+  margin-left: -1vw;
+  content: '⟳';
+  animation: rotate 1s infinite;
+}
+
+.testcase.failed {
+  background-color: #f004;
+  border: .1vw solid #f00;
+  color: #f00;
+}
+
+.testcase.failed::before {
+  margin-left: -1vw;
+  content: '✗';
+}
+
+.testcase.passed {
+  background-color: #0f04;
+  border: .1vw solid #0f0;
+  color: #0f0;
+}
+
+.testcase.passed::before {
+  content: '✓';
+}

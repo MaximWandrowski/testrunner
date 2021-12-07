@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+
+  testrunner:
+    image: testrunner
+    build: .
+    ports:
+      - "8080:80"
